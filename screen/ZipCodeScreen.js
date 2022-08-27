@@ -26,8 +26,8 @@ const ZipItem = ({place, code, navigation}) => (
         navigation.navigate("Weather", {zipCode: place}) // change zipcode to province
     }}>
         <View style = {style.zipItem}>
-            <Text>{place}</Text>
-            <Text>{code}</Text>
+        <Text style= {style.zipPlace}>{place}</Text>
+            <Text style= {style.zipCode}>{code}</Text>
         </View>
     </TouchableHighlight>
 )
@@ -51,9 +51,9 @@ export default function ZipCodeScreen(){
 const style = StyleSheet.create(
     {
       zipItem: {
-        flex: 1,
+        flex: 2,
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-evenly'
       },
       zipPlace: {
         flex: 1,
