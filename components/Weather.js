@@ -6,11 +6,11 @@ import Constants from 'expo-constants';
 
 export default function Weather(props) {
     const [forecastInfo, setForecastInfo] = useState({
-        main: 'loading..',
-        description: 'loading',
+        main: 'loading...',
+        description: 'loading...',
         temp: 0,
-        humidity: 'loading',
-        feels_like: 'loading',
+        humidity: 'loading...',
+        feels_like: 'loading...',
     })
 
     useEffect(() => {
@@ -37,7 +37,7 @@ export default function Weather(props) {
     return (
         <ImageBackground source={require('../Bg.jpg')} style={style.backdrop}>
             <View style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', width:"100%"}}>
-                  <Text style={style.titleText}>ZipCode : {props.zipCode}.</Text>
+                  <Text style={style.titleText}>{props.zipCode}</Text>
                 </View>
                 <View style={style.highlight}>
                 <Forecast {...forecastInfo}/>
